@@ -8,16 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Ming&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="�������ing...">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Ming&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Ming&#39;s Blog">
-<meta property="og:description" content="�������ing...">
 <meta property="og:locale" content="utf-8">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ming&#39;s Blog">
-<meta name="twitter:description" content="�������ing...">
   
     <link rel="alternative" href="/atom.xml" title="Ming&#39;s Blog" type="application/atom+xml">
   
@@ -52,6 +49,8 @@
 		  <h1 class="header-author"><a href="/">Ming</a></h1>
 		</hgroup>
 		
+		<p class="header-subtitle">Stay hungry Stay foolish</p>
+		
 
 		<nav class="header-menu">
 			<ul>
@@ -82,11 +81,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/Traveler-WM" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="bilibili" target="_blank" href="https://www.bilibili.com/" title="bilibili"><i class="icon-bilibili"></i></a>
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/37916706" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
 					<a class="google" target="_blank" href="https://www.google.com/" title="google"><i class="icon-google"></i></a>
-		        
-					<a class="twitter" target="_blank" href="https://twitter.com/" title="twitter"><i class="icon-twitter"></i></a>
 		        
 			</div>
 		</nav>
@@ -110,6 +107,8 @@
 			  <h1 class="header-author js-header-author">Ming</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Stay hungry Stay foolish<i class="icon icon-quo-right"></i></p>
+			
 			
 			
 				
@@ -123,11 +122,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Traveler-WM" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="bilibili" target="_blank" href="https://www.bilibili.com/" title="bilibili"><i class="icon-bilibili"></i></a>
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/37916706" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
 						<a class="google" target="_blank" href="https://www.google.com/" title="google"><i class="icon-google"></i></a>
-			        
-						<a class="twitter" target="_blank" href="https://twitter.com/" title="twitter"><i class="icon-twitter"></i></a>
 			        
 				</div>
 			</nav>
@@ -162,7 +159,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/08/docker学习(-)/">docker入门(-)</a>
+      <a class="article-title" href="/2019/03/08/docker学习(-)/">docker学习(-)</a>
     </h1>
   
 
@@ -170,6 +167,30 @@
         <a href="/2019/03/08/docker学习(-)/" class="archive-article-date">
   	<time datetime="2019-03-08T11:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
 </a>
+         <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">725字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+          
+        <!-- 添加完成 -->
+        
         
       </header>
     
@@ -181,32 +202,14 @@
 <li>Docker 需要的资源更少。Docker 在操作系统级别进行虚拟化，Docker 容器和内核交互，几乎没有性能损耗。</li>
 <li>Docker 更轻量。Docker 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件环境Docker 运行的镜像数远多于虚拟机数量，对系统的利用率非常高。</li>
 <li>高可用和可恢复性。Docker 对业务的高可用支持是通过快速重新部署实现的。</li>
-<li>虚拟化具备负载均衡，高可用，容错，迁移和数据保护等经过生产实践检验的成熟保障机制。</li>
-<li>快速创建、删除。虚拟化创建是分钟级别的，Docker 容器创建是秒级别的，Docker 的快速迭代性，决定了无论是开发、测试、部署都可以节约大量时间</li>
-</ul>
-<h2 id="容器和镜像"><a href="#容器和镜像" class="headerlink" title="容器和镜像"></a>容器和镜像</h2><pre><code>一个容器通过镜像启动。镜像是一个可执行包，包含运行应用程序所需的所有内容——代码、运行时、库、环境变量和配置文件。容器是镜像运行时的实例  
-</code></pre><h2 id="容器和虚拟机"><a href="#容器和虚拟机" class="headerlink" title="容器和虚拟机"></a>容器和虚拟机</h2><pre><code>容器在Linux上本机运行，并与其他容器共享主机的内核。它运行一个独立的进程，不占用任何其他可执行文件的内存，使其轻量级。相比之下，虚拟机（VM）运行一个完整的“客户”操作系统，通过虚拟机管理程序对主机资源进行虚拟访问。通常，VM提供的环境比大多数应用程序需要的资源更多。    
-</code></pre><h1 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h1><h2 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h2><p><strong>卸载掉旧版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure></p>
-<p> <strong>安装依赖包</strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install -y yum-utils \</span><br><span class="line">      device-mapper-persistent-data \</span><br><span class="line">      lvm2</span><br></pre></td></tr></table></figure></p>
-<p> <strong>设置稳定版仓库</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></p>
-<p><strong>安装最新版Docker CE</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure></p>
-<p><strong>启动Docker</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure></p>
-<p><strong>运行hellow-word镜像</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure></p>
-<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><p><strong>卸载可能存在的旧版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get remove docker docker-engine docker.io containerd runc</span><br></pre></td></tr></table></figure></p>
-<p><strong>更新apt索引包</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></p>
-<p><strong>安装包通过https使用repository</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br></pre></td></tr></table></figure></p>
-<p><strong>添加Docker的官方GPG密钥</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure></p>
-<p><strong>更新apt包索引</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure></p>
-<p><strong>安装最新版Docker CE</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure></p>
-<p><strong>PS:安装特定版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache madison docker-ce</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install docker-ce=&lt;VERSION_STRING&gt; docker-ce-cli=&lt;VERSION_STRING&gt; containerd.io</span><br></pre></td></tr></table></figure>
-<p><strong>运行hello-word镜像</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker run hello-world</span><br></pre></td></tr></table></figure></p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="http://dockone.io/article/8350" target="_blank" rel="noopener">http://dockone.io/article/8350</a></p>
-
+<li>虚拟化具备负载均衡，高可用，容错，迁移和数据保护等经过生产实践检验的成熟保障机制。
+        
+          <a class="article-more-a" href="/2019/03/08/docker学习(-)/#more">more >></a>
+        
       
 
       
-    </div>
+    </li></ul></div>
     <div class="article-info article-info-index">
       
       

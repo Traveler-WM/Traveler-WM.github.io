@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/3 | Ming&#39;s Blog</title>
+  <title>Docker学习(二):Docker常用命令 | Ming&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ming&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/03/index.html">
+  <meta name="description" content="查看Docker信息   12345#显示Docker版本信息docker version#显示Docker系统信息docker info 镜像仓库docker search   123456#从Docker Hub查找镜像docker search [OPTIONS] TERM```   - automated :只列出 automated build类型的镜像；- --no-trunc :显示">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker学习(二):Docker常用命令">
+<meta property="og:url" content="http://yoursite.com/2019/03/10/Docker学习(二)—Docker常用命令/index.html">
 <meta property="og:site_name" content="Ming&#39;s Blog">
+<meta property="og:description" content="查看Docker信息   12345#显示Docker版本信息docker version#显示Docker系统信息docker info 镜像仓库docker search   123456#从Docker Hub查找镜像docker search [OPTIONS] TERM```   - automated :只列出 automated build类型的镜像；- --no-trunc :显示">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2019-03-10T03:54:02.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ming&#39;s Blog">
+<meta name="twitter:title" content="Docker学习(二):Docker常用命令">
+<meta name="twitter:description" content="查看Docker信息   12345#显示Docker版本信息docker version#显示Docker系统信息docker info 镜像仓库docker search   123456#从Docker Hub查找镜像docker search [OPTIONS] TERM```   - automated :只列出 automated build类型的镜像；- --no-trunc :显示">
   
     <link rel="alternative" href="/atom.xml" title="Ming&#39;s Blog" type="application/atom+xml">
   
@@ -150,36 +155,94 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Docker学习(二)—Docker常用命令" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/10/Docker学习(二)—Docker常用命令/" class="archive-article-date">
-  	<time datetime="2019-03-10T02:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/10/Docker学习(二)—Docker常用命令/">Docker学习(二):Docker常用命令</a>
+    <h1 class="article-title" itemprop="name">
+      Docker学习(二):Docker常用命令
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2019/03/10/Docker学习(二)—Docker常用命令/" class="archive-article-date">
+  	<time datetime="2019-03-10T02:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
+</a>
+         <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
           
+        <!-- 添加完成 -->
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="查看Docker信息"><a href="#查看Docker信息" class="headerlink" title="查看Docker信息"></a>查看Docker信息</h1>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#显示Docker版本信息</span><br><span class="line">docker version</span><br><span class="line"></span><br><span class="line">#显示Docker系统信息</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure>
+<h1 id="镜像仓库"><a href="#镜像仓库" class="headerlink" title="镜像仓库"></a>镜像仓库</h1><h2 id="docker-search"><a href="#docker-search" class="headerlink" title="docker search"></a>docker search</h2>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#从Docker Hub查找镜像</span><br><span class="line">docker search [OPTIONS] TERM</span><br><span class="line">```   </span><br><span class="line">- automated :只列出 automated build类型的镜像；</span><br><span class="line">- --no-trunc :显示完整的镜像描述；</span><br><span class="line">- -s :列出收藏数不小于指定值的镜像。</span><br></pre></td></tr></table></figure>
+<h1 id="查找收藏数大于30的java镜像"><a href="#查找收藏数大于30的java镜像" class="headerlink" title="查找收藏数大于30的java镜像"></a>查找收藏数大于30的java镜像</h1><p>   docker search -s 30 java<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## docker pull</span><br></pre></td></tr></table></figure></p>
+<h1 id="Docker-Hub中拉取镜像"><a href="#Docker-Hub中拉取镜像" class="headerlink" title="Docker Hub中拉取镜像"></a>Docker Hub中拉取镜像</h1><p>   docker pull [OPTIONS] NAME[:Tag|DIGEST]</p>
+<h1 id="下载java最新版镜像"><a href="#下载java最新版镜像" class="headerlink" title="下载java最新版镜像"></a>下载java最新版镜像</h1><p>   docker pull java</p>
+<h1 id="下载所有名为java的镜像"><a href="#下载所有名为java的镜像" class="headerlink" title="下载所有名为java的镜像"></a>下载所有名为java的镜像</h1><p>   docker pull -a java<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## docker push</span><br></pre></td></tr></table></figure></p>
+<h1 id="将本地镜像上传到镜像仓库，先登陆镜像仓库"><a href="#将本地镜像上传到镜像仓库，先登陆镜像仓库" class="headerlink" title="将本地镜像上传到镜像仓库，先登陆镜像仓库"></a>将本地镜像上传到镜像仓库，先登陆镜像仓库</h1><p>   docker push [OPTIONS] NAME[:TAG]</p>
+<p>   #上传本地镜像mynginx:v1到镜像仓库中<br>   docker push mynginx:v1<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## Docker login/logout</span><br></pre></td></tr></table></figure></p>
+<h1 id="登录到Docker-Hub"><a href="#登录到Docker-Hub" class="headerlink" title="登录到Docker Hub"></a>登录到Docker Hub</h1><p>   docker login -u 用户名 -p 密码</p>
+<h1 id="登出Docker-Hub"><a href="#登出Docker-Hub" class="headerlink" title="登出Docker Hub"></a>登出Docker Hub</h1><p>   docker logout<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 本地镜像仓库</span><br><span class="line"></span><br><span class="line">## docker images</span><br></pre></td></tr></table></figure></p>
+<h1 id="查看本地镜像列表"><a href="#查看本地镜像列表" class="headerlink" title="查看本地镜像列表"></a>查看本地镜像列表</h1><p>   docker images</p>
+<h1 id="列出名为java的镜像列表"><a href="#列出名为java的镜像列表" class="headerlink" title="列出名为java的镜像列表"></a>列出名为java的镜像列表</h1><p>   docker images java<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## docker rmi</span><br></pre></td></tr></table></figure></p>
+<h1 id="删除本地一个或多个镜像"><a href="#删除本地一个或多个镜像" class="headerlink" title="删除本地一个或多个镜像"></a>删除本地一个或多个镜像</h1><p>   docker rmi [OPTIONS] IMAGE [IMAGE…]  </p>
+<h1 id="强制删除本地镜像my-nginx-v1"><a href="#强制删除本地镜像my-nginx-v1" class="headerlink" title="强制删除本地镜像my/nginx:v1"></a>强制删除本地镜像my/nginx:v1</h1><p>   docker rmi -f my/nginx:v1<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## docker build</span><br></pre></td></tr></table></figure></p>
+<h1 id="使用Dockerfile创建镜像"><a href="#使用Dockerfile创建镜像" class="headerlink" title="使用Dockerfile创建镜像"></a>使用Dockerfile创建镜像</h1><p>   docker build [OPTIONS] PATH | URL | -<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">OPTIONS说明：</span><br><span class="line">- -t 指定镜像的名字 </span><br><span class="line">- -f 指定要使用的Dockerfile路径(Dockerfile 可不在当前路径下）</span><br><span class="line"></span><br><span class="line">实列:</span><br></pre></td></tr></table></figure></p>
+<h1 id="最后的-代表使用当前目录的Dockerfile创建镜像"><a href="#最后的-代表使用当前目录的Dockerfile创建镜像" class="headerlink" title="最后的.代表使用当前目录的Dockerfile创建镜像"></a>最后的.代表使用当前目录的Dockerfile创建镜像</h1><p>   docker build -t my/nginx:v1 .</p>
+<h1 id="使用URL-github-com-creack-docker-firefox-的-Dockerfile-创建镜像"><a href="#使用URL-github-com-creack-docker-firefox-的-Dockerfile-创建镜像" class="headerlink" title="使用URL github.com/creack/docker-firefox 的 Dockerfile 创建镜像"></a>使用URL github.com/creack/docker-firefox 的 Dockerfile 创建镜像</h1><p>   docker build github.com/creack/docker-firefox<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 容器管理</span><br><span class="line"></span><br><span class="line">## docker run</span><br></pre></td></tr></table></figure></p>
+<h1 id="创建一个新的容器并运行一个命令"><a href="#创建一个新的容器并运行一个命令" class="headerlink" title="创建一个新的容器并运行一个命令"></a>创建一个新的容器并运行一个命令</h1><p>   docker run [OPTIONS] IMAGE [COMMAND] [ARG…]<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">OPTIONS说明：</span><br><span class="line">- -d: 后台运行容器，并返回容器ID</span><br><span class="line">- -i: 以交互模式运行容器，通常与 -t 同时使用</span><br><span class="line">- --name: 为容器指定一个名称</span><br><span class="line">- --dns 8.8.8.8: 指定容器使用的DNS服务器，默认和宿主一致</span><br><span class="line">- -m :设置容器使用内存最大值</span><br><span class="line">- -p: 映射宿主端口到内部容器开放的网络端口，可以多次使用-p来绑定多个端口</span><br></pre></td></tr></table></figure></p>
+<p>   #使用docker镜像nginx:latest以后台模式启动一个容器,并将容器命名为mynginx<br>   docker run –name mynginx -d nginx:latest</p>
+<h1 id="使用镜像nginx-latest以后台模式启动一个容器-将容器的80端口映射到主机的80端口-主机的目录-data映射到容器的-data。"><a href="#使用镜像nginx-latest以后台模式启动一个容器-将容器的80端口映射到主机的80端口-主机的目录-data映射到容器的-data。" class="headerlink" title="使用镜像nginx:latest以后台模式启动一个容器,将容器的80端口映射到主机的80端口,主机的目录/data映射到容器的/data。"></a>使用镜像nginx:latest以后台模式启动一个容器,将容器的80端口映射到主机的80端口,主机的目录/data映射到容器的/data。</h1><p>   docker run -p 80:80 -v /data:/data -d nginx:latest</p>
+<h1 id="使用镜像nginx-latest以交互模式启动一个容器-在容器内执行-bin-bash命令"><a href="#使用镜像nginx-latest以交互模式启动一个容器-在容器内执行-bin-bash命令" class="headerlink" title="使用镜像nginx:latest以交互模式启动一个容器,在容器内执行/bin/bash命令"></a>使用镜像nginx:latest以交互模式启动一个容器,在容器内执行/bin/bash命令</h1><p>   docker run -it nginx:latest /bin/bash<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">## docker start/stop/restart   </span><br><span class="line"></span><br><span class="line">   - docker start :启动一个或多少已经被停止的容器</span><br><span class="line">   - docker stop :停止一个运行中的容器</span><br><span class="line">   - docker restart :重启容器</span><br><span class="line"></span><br><span class="line">## docker kill</span><br></pre></td></tr></table></figure></p>
+<h1 id="杀掉运行中的容器mynginx"><a href="#杀掉运行中的容器mynginx" class="headerlink" title="杀掉运行中的容器mynginx"></a>杀掉运行中的容器mynginx</h1><p>   docker kill mynginx<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## docker rm</span><br></pre></td></tr></table></figure></p>
+<h1 id="删除一个或多个容器"><a href="#删除一个或多个容器" class="headerlink" title="删除一个或多个容器"></a>删除一个或多个容器</h1><p>   docker rm [OPTIONS] CONTAINER [CONTAINER…]<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">OPTIONS说明：</span><br><span class="line">- -f :通过SIGKILL信号强制删除一个运行中的容器</span><br><span class="line">- -l :移除容器间的网络连接，而非容器本身</span><br><span class="line">- -v :删除与容器关联的卷</span><br></pre></td></tr></table></figure></p>
+<h1 id="强制删除容器db01、db02"><a href="#强制删除容器db01、db02" class="headerlink" title="强制删除容器db01、db02"></a>强制删除容器db01、db02</h1><p>   docker rm -f db01、db02</p>
+<h1 id="移除容器nginx01对容器db01的连接，连接名db"><a href="#移除容器nginx01对容器db01的连接，连接名db" class="headerlink" title="移除容器nginx01对容器db01的连接，连接名db"></a>移除容器nginx01对容器db01的连接，连接名db</h1><p>   docker rm -l db </p>
+<h1 id="删除容器nginx01-并删除容器挂载的数据卷"><a href="#删除容器nginx01-并删除容器挂载的数据卷" class="headerlink" title="删除容器nginx01,并删除容器挂载的数据卷"></a>删除容器nginx01,并删除容器挂载的数据卷</h1><p>   docker rm -v nginx01<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## docker exec</span><br></pre></td></tr></table></figure></p>
+<h1 id="在运行的容器中执行命令"><a href="#在运行的容器中执行命令" class="headerlink" title="在运行的容器中执行命令"></a>在运行的容器中执行命令</h1><p>   docker exec [OPTIONS] CONTAINER COMMAND [ARG…]<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">OPTIONS说明：</span><br><span class="line">- -d :分离模式: 在后台运行</span><br><span class="line">- -i :即使没有附加也保持STDIN 打开</span><br><span class="line">- -t :分配一个伪终端</span><br></pre></td></tr></table></figure></p>
+<h1 id="在容器mynginx中开启一个交互模式的终端"><a href="#在容器mynginx中开启一个交互模式的终端" class="headerlink" title="在容器mynginx中开启一个交互模式的终端"></a>在容器mynginx中开启一个交互模式的终端</h1><p>   docker exec -it  mynginx /bin/bash</p>
+<h1 id="在容器mynginx中以交互模式执行容器内-root-youj-sh脚本"><a href="#在容器mynginx中以交互模式执行容器内-root-youj-sh脚本" class="headerlink" title="在容器mynginx中以交互模式执行容器内/root/youj.sh脚本"></a>在容器mynginx中以交互模式执行容器内/root/youj.sh脚本</h1><p>   docker exec -it mynginx /bin/sh /root/youj.sh<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 容器操作</span><br><span class="line"></span><br><span class="line">## docker ps</span><br></pre></td></tr></table></figure></p>
+<h1 id="列出所有在运行的容器信息"><a href="#列出所有在运行的容器信息" class="headerlink" title="列出所有在运行的容器信息"></a>列出所有在运行的容器信息</h1><pre><code>docker ps
+</code></pre><h1 id="列出最近创建的5个容器信息"><a href="#列出最近创建的5个容器信息" class="headerlink" title="列出最近创建的5个容器信息"></a>列出最近创建的5个容器信息</h1><pre><code>docker ps -n 5
+</code></pre><h1 id="列出所有创建的容器ID"><a href="#列出所有创建的容器ID" class="headerlink" title="列出所有创建的容器ID"></a>列出所有创建的容器ID</h1><pre><code>docker ps -a -q
+</code></pre>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">## docker top</span><br></pre></td></tr></table></figure>
+<h1 id="查看容器mymysql的进程信息"><a href="#查看容器mymysql的进程信息" class="headerlink" title="查看容器mymysql的进程信息"></a>查看容器mymysql的进程信息</h1><p>   docker top mymysql<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## docker logs</span><br></pre></td></tr></table></figure></p>
+<h1 id="跟踪查看容器mynginx的日志输出"><a href="#跟踪查看容器mynginx的日志输出" class="headerlink" title="跟踪查看容器mynginx的日志输出"></a>跟踪查看容器mynginx的日志输出</h1><p>   docker logs -f mynginx</p>
+<h1 id="查看容器mynginx从2019年3月1日后的最新10条日志"><a href="#查看容器mynginx从2019年3月1日后的最新10条日志" class="headerlink" title="查看容器mynginx从2019年3月1日后的最新10条日志"></a>查看容器mynginx从2019年3月1日后的最新10条日志</h1><p>   docker logs –since=”2019-03-01” –tail=10 mynginx<br>   <code>`</code>    </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,57 +254,147 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/10/Docker学习(二)—Docker常用命令/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/08/docker学习(一)—Docker简介和安装/" class="archive-article-date">
-  	<time datetime="2019-03-08T11:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/08/docker学习(一)—Docker简介和安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker学习(一):Docker简介和安装</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/08/docker学习(一)—Docker简介和安装/">docker学习(一):Docker简介和安装</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Docker学习(二)—Docker常用命令" data-title="Docker学习(二):Docker常用命令" data-url="http://yoursite.com/2019/03/10/Docker学习(二)—Docker常用命令/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2019/03/10/Docker学习(二)—Docker常用命令/", 
+    sourceId: "Docker学习(二)—Docker常用命令",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
+  <div id="SOHUCS" sid="Docker学习(二)—Docker常用命令"></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+
   
 
-    
+  
+
+  
 
 
           </div>
@@ -274,8 +427,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

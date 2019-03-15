@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Docker学习(二)之Docker常用命令 | Ming&#39;s Blog</title>
+  <title>Docker学习(三)之Dockerfile笔记 | Ming&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查看Docker信息12345#显示Docker版本信息docker version# 显示Docker系统信息docker info 镜像仓库docker search12# 从Docker Hub查找镜像docker search [OPTIONS] TERM">
+  <meta name="description" content="Dockerfile构建镜像镜像作为Docker的一个重要概念，其实际上就是定制每一层所添加的配置、文件。而Dockerfile就是一个脚本文件，用于把该每一层修改、安装、构建、操作的命令写入其中来构建、定制镜像。 Dockerfile是一个文本文档，其中包含用户可以在命令行上调用来构建镜像的所有命令。 使用Dockerfile用户可以创建一个连续执行多个命令行指令的镜像。 实例:以构建nginx">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker学习(二)之Docker常用命令">
-<meta property="og:url" content="http://yoursite.com/2019/03/10/Docker学习(二)之Docker常用命令/index.html">
+<meta property="og:title" content="Docker学习(三)之Dockerfile笔记">
+<meta property="og:url" content="http://yoursite.com/2019/03/15/Docker学习-三-之Dockerfile介绍/index.html">
 <meta property="og:site_name" content="Ming&#39;s Blog">
-<meta property="og:description" content="查看Docker信息12345#显示Docker版本信息docker version# 显示Docker系统信息docker info 镜像仓库docker search12# 从Docker Hub查找镜像docker search [OPTIONS] TERM">
+<meta property="og:description" content="Dockerfile构建镜像镜像作为Docker的一个重要概念，其实际上就是定制每一层所添加的配置、文件。而Dockerfile就是一个脚本文件，用于把该每一层修改、安装、构建、操作的命令写入其中来构建、定制镜像。 Dockerfile是一个文本文档，其中包含用户可以在命令行上调用来构建镜像的所有命令。 使用Dockerfile用户可以创建一个连续执行多个命令行指令的镜像。 实例:以构建nginx">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2019-03-10T05:41:12.201Z">
+<meta property="og:updated_time" content="2019-03-15T05:15:58.657Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker学习(二)之Docker常用命令">
-<meta name="twitter:description" content="查看Docker信息12345#显示Docker版本信息docker version# 显示Docker系统信息docker info 镜像仓库docker search12# 从Docker Hub查找镜像docker search [OPTIONS] TERM">
+<meta name="twitter:title" content="Docker学习(三)之Dockerfile笔记">
+<meta name="twitter:description" content="Dockerfile构建镜像镜像作为Docker的一个重要概念，其实际上就是定制每一层所添加的配置、文件。而Dockerfile就是一个脚本文件，用于把该每一层修改、安装、构建、操作的命令写入其中来构建、定制镜像。 Dockerfile是一个文本文档，其中包含用户可以在命令行上调用来构建镜像的所有命令。 使用Dockerfile用户可以创建一个连续执行多个命令行指令的镜像。 实例:以构建nginx">
   
     <link rel="alternative" href="/atom.xml" title="Ming&#39;s Blog" type="application/atom+xml">
   
@@ -155,20 +155,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Docker学习(二)之Docker常用命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Docker学习-三-之Dockerfile介绍" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Docker学习(二)之Docker常用命令
+      Docker学习(三)之Dockerfile笔记
     </h1>
   
 
         
-        <a href="/2019/03/10/Docker学习(二)之Docker常用命令/" class="archive-article-date">
-  	<time datetime="2019-03-10T02:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
+        <a href="/2019/03/15/Docker学习-三-之Dockerfile介绍/" class="archive-article-date">
+  	<time datetime="2019-03-15T02:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
 </a>
          <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -178,7 +178,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">986字</span>
+      <span class="post-count">1.8k字</span>
     </span>
   </span>
 
@@ -187,7 +187,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">4分</span>
+      <span class="post-count">7分</span>
     </span>
   </span>
 </div>
@@ -199,65 +199,62 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="查看Docker信息"><a href="#查看Docker信息" class="headerlink" title="查看Docker信息"></a>查看Docker信息</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#显示Docker版本信息</span><br><span class="line">docker version</span><br><span class="line"></span><br><span class="line"># 显示Docker系统信息</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure>
-<h1 id="镜像仓库"><a href="#镜像仓库" class="headerlink" title="镜像仓库"></a>镜像仓库</h1><h2 id="docker-search"><a href="#docker-search" class="headerlink" title="docker search"></a>docker search</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 从Docker Hub查找镜像</span><br><span class="line">docker search [OPTIONS] TERM</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>OPTIONS说明</p>
+        <h1 id="Dockerfile构建镜像"><a href="#Dockerfile构建镜像" class="headerlink" title="Dockerfile构建镜像"></a>Dockerfile构建镜像</h1><p>镜像作为Docker的一个重要概念，其实际上就是定制每一层所添加的配置、文件。而Dockerfile就是一个脚本文件，用于把该每一层修改、安装、构建、操作的命令写入其中来构建、定制镜像。</p>
+<p>Dockerfile是一个文本文档，其中包含用户可以在命令行上调用来构建镜像的所有命令。 使用Dockerfile用户可以创建一个连续执行多个命令行指令的镜像。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h2><p>以构建nginx镜像为例，在一个空白目录，建立一个文本文件，并命名为 dockerfile:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir mynginx</span><br><span class="line">$ cd mynginx</span><br><span class="line">$ touch dockerfile</span><br></pre></td></tr></table></figure>
+<p>在该dockerfile中写入内容:<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx</span><br><span class="line">RUN echo &apos;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&apos; &gt; /usr/share/nginx/html/index.html</span><br></pre></td></tr></table></figure></p>
+<p>这个dockerile比较简单，用到了<code>FROM</code>和<code>RUN</code>两条命令，意思是基于nginx镜像,运行echo命令重定向输出<code>&lt;h1&gt;</code>标签内容到index.html文件中</p>
+<h1 id="Dockerfile常用命令"><a href="#Dockerfile常用命令" class="headerlink" title="Dockerfile常用命令"></a>Dockerfile常用命令</h1><h2 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h2><p>格式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;</span><br><span class="line">或</span><br><span class="line">FROM &lt;image&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure>
+<p>FROM在Dockerfile中是必须的指令，而且必须是第一条指令。它以一个镜像为基础，在其上进行定制，该基础镜像首选本地是否存在，如果不存在则会从公共仓库下载（当然也可以使用私有仓库的格式）</p>
 <ul>
-<li>automated :只列出 automated build类型的镜像</li>
-<li>–no-trunc :显示完整的镜像描述</li>
-<li>-s :列出收藏数不小于指定值的镜像</li>
+<li>通过Docker Hub官方镜像仓库的镜像，比如服务类(nginx/redis)、语言类(node/openjdk/python)、操作系统类(ubuntu/debian/centos)等，我们可以直接pull下来进行基础构建。</li>
+<li>除了选择现有的镜像作为基础镜像外，Docker还存在一个特殊的镜像，名为scratch。这个镜像是虚拟的概念，并不实际存在，它表示一个空白的镜像 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 查找收藏数大于30的java镜像</span><br><span class="line">docker search -s 30 java</span><br></pre></td></tr></table></figure>
-<h2 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Docker Hub中拉取镜像</span><br><span class="line">docker pull [OPTIONS] NAME[:Tag|DIGEST]</span><br><span class="line"></span><br><span class="line"># 下载java最新版镜像</span><br><span class="line">docker pull java</span><br><span class="line"></span><br><span class="line"># 下载所有名为java的镜像</span><br><span class="line">docker pull -a java</span><br></pre></td></tr></table></figure>
-<h2 id="docker-push"><a href="#docker-push" class="headerlink" title="docker push"></a>docker push</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 将本地镜像上传到镜像仓库，先登陆镜像仓库</span><br><span class="line">docker push [OPTIONS] NAME[:TAG]</span><br><span class="line"></span><br><span class="line"># 上传本地镜像mynginx:v1到镜像仓库中</span><br><span class="line">docker push mynginx:v1</span><br></pre></td></tr></table></figure>
-<h2 id="Docker-login-logout"><a href="#Docker-login-logout" class="headerlink" title="Docker login/logout"></a>Docker login/logout</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 登录到Docker Hub</span><br><span class="line">docker login -u 用户名 -p 密码</span><br><span class="line"></span><br><span class="line"># 登出Docker Hub</span><br><span class="line">docker logout</span><br></pre></td></tr></table></figure>
-<h1 id="本地镜像仓库"><a href="#本地镜像仓库" class="headerlink" title="本地镜像仓库"></a>本地镜像仓库</h1><h2 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看本地镜像列表</span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line"># 列出名为java的镜像列表</span><br><span class="line">docker images java</span><br></pre></td></tr></table></figure>
-<h2 id="docker-rmi"><a href="#docker-rmi" class="headerlink" title="docker rmi"></a>docker rmi</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 删除本地一个或多个镜像</span><br><span class="line">docker rmi [OPTIONS] IMAGE [IMAGE...]  </span><br><span class="line"></span><br><span class="line"># 强制删除本地镜像my/nginx:v1</span><br><span class="line">docker rmi -f my/nginx:v1</span><br></pre></td></tr></table></figure>
-<h2 id="docker-build"><a href="#docker-build" class="headerlink" title="docker build"></a>docker build</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 使用Dockerfile创建镜像</span><br><span class="line">docker build [OPTIONS] PATH | URL | -</span><br></pre></td></tr></table></figure>
-<p>OPTIONS说明</p>
+<h2 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h2><p>run指令是用来执行命令行命令的，定制镜像时是最常用的指令之一。其格式有两种:</p>
 <ul>
-<li>-t 指定镜像的名字 </li>
-<li>-f 指定要使用的Dockerfile路径(Dockerfile 可不在当前路径下）</li>
+<li>shell格式： RUN 命令，就像直接在命令行中输入的命令一样，如RUN echo ‘hello, world!’ &gt; hello.txt</li>
+<li>exec格式：RUN [‘可执行文件’, ‘参数1’, ‘参数2’]，这更像是函数调用中的格式。如RUN /bin/bash -c ‘source $HOME/.bashrc; echo $HOME’</li>
 </ul>
-<p>实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 最后的.代表使用当前目录的Dockerfile创建镜像</span><br><span class="line">docker build -t my/nginx:v1 .</span><br><span class="line"></span><br><span class="line"># 使用URL github.com/creack/docker-firefox 的 Dockerfile 创建镜像</span><br><span class="line">docker build github.com/creack/docker-firefox</span><br></pre></td></tr></table></figure>
-<h1 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h1><h2 id="docker-run"><a href="#docker-run" class="headerlink" title="docker run"></a>docker run</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个新的容器并运行一个命令</span><br><span class="line">docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</span><br></pre></td></tr></table></figure>
-<p>OPTIONS说明</p>
+<p>Dockerfile中每一个指令都会建立一层，RUN也不例外。每一个RUN的行为，就和刚才我们手工建立镜像的过程一样:新建立一层，在其上执行这些命令，执行结束后，commit这一层的修改，构成新的镜像。所以在使用RUN命令时应当尽可能地减少层数，避免构建了多层、臃肿的镜像，既增加了构建部署的时间，也很容易出错（可以使用&amp;&amp;将各个所需命令串联起来）</p>
+<h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>CMD指令的主要功能是在build完成后，为了给docker run启动到容器时提供默认命令或参数，这些默认值可以包含可执行的命令，也可以只是参数（此时可执行命令就必须提前在ENTRYPOINT中指定)。Dockerfile中只能有一条CMD指令。如果列出多个CMD，则只有最后一个CMD才会生效</p>
+<p>CMD命令包含三种结构:</p>
 <ul>
-<li>-d: 后台运行容器，并返回容器ID</li>
-<li>-i: 以交互模式运行容器，通常与 -t 同时使用</li>
-<li>–name: 为容器指定一个名称</li>
-<li>–dns 8.8.8.8: 指定容器使用的DNS服务器，默认和宿主一致</li>
-<li>-m :设置容器使用内存最大值</li>
-<li>-p: 映射宿主端口到内部容器开放的网络端口，可以多次使用-p来绑定多个端口</li>
+<li>CMD [“executable”,”param1”,”param2”] (exec格式首选)</li>
+<li>CMD [“param1”,”param2”] (作为ENTRYPOINT的默认变量)</li>
+<li>CMD command param1 param2 (shell格式)</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 使用docker镜像nginx:latest以后台模式启动一个容器,并将容器命名为mynginx</span><br><span class="line">docker run --name mynginx -d nginx:latest</span><br><span class="line"></span><br><span class="line"># 使用镜像nginx:latest以后台模式启动一个容器,将容器的80端口映射到主机的80端口,主机的目录/data映射到容器的/data。</span><br><span class="line">docker run -p 80:80 -v /data:/data -d nginx:latest</span><br><span class="line"></span><br><span class="line"># 使用镜像nginx:latest以交互模式启动一个容器,在容器内执行/bin/bash命令</span><br><span class="line">docker run -it nginx:latest /bin/bash</span><br></pre></td></tr></table></figure>
-<h2 id="docker-start-stop-restart"><a href="#docker-start-stop-restart" class="headerlink" title="docker start/stop/restart"></a>docker start/stop/restart</h2><ul>
-<li>docker start :启动一个或多少已经被停止的容器</li>
-<li>docker stop :停止一个运行中的容器</li>
-<li>docker restart :重启容器</li>
-</ul>
-<h2 id="docker-kill"><a href="#docker-kill" class="headerlink" title="docker kill"></a>docker kill</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 杀掉运行中的容器mynginx</span><br><span class="line">docker kill mynginx</span><br></pre></td></tr></table></figure>
-<h2 id="docker-rm"><a href="#docker-rm" class="headerlink" title="docker rm"></a>docker rm</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 删除一个或多个容器</span><br><span class="line">docker rm [OPTIONS] CONTAINER [CONTAINER...]</span><br></pre></td></tr></table></figure>
-<p>OPTIONS说明</p>
+<p>CMD与RUN的区别在于，RUN是在build成镜像时就运行的，先于CMD和ENTRYPOINT的，CMD会在每次启动容器的时候运行，而RUN只在创建镜像时执行一次，固化在image中。</p>
+<h2 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADD &lt;src&gt;... &lt;dest&gt;</span><br></pre></td></tr></table></figure>
+<p>将文件<code>&lt;src&gt;</code>拷贝到container的文件系统对应的路径<code>&lt;dest&gt;</code>下。<code>&lt;src&gt;</code>可以是文件、文件夹、URL，对于文件和文件夹<src>必须是在Dockerfile的相对路径下（build context path），即只能是相对路径且不能包含../path/。</src></p>
+<p><code>&lt;dest&gt;</code>只能是容器中的绝对路径。如果路径不存在则会自动级联创建，根据你的需要是<code>&lt;dest&gt;</code>里是否需要反斜杠/，习惯使用/结尾从而避免被当成文件</p>
+<h2 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h2><p>COPY 指令将从构建上下文目录中&lt;源路径&gt;的文件复制到新的一层的镜像内的&lt;目标路径&gt;位置。</p>
+<p>和 RUN 指令一样，也有两种格式，一种类似于命令行，一种类似于函数调用：</p>
+<p>COPY &lt;源路径&gt;… &lt;目标路径&gt;<br>COPY [“&lt;源路径1&gt;”,… “&lt;目标路径&gt;”]</p>
+<p>COPY的语法与功能与ADD相同，只是不支持上面讲到的<src>是远程URL、自动解压这两个特性。推荐使用COPY，虽然COPY只支持本地文件拷贝到container，但它的处理比ADD更加透明，建议只在复制tar文件时使用ADD，如ADD trusty-core-amd64.tar.gz /。</src></p>
+<h2 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h2><p>用于设置环境变量<br>格式有两种：</p>
 <ul>
-<li>-f :通过SIGKILL信号强制删除一个运行中的容器</li>
-<li>-l :移除容器间的网络连接，而非容器本身</li>
-<li>-v :删除与容器关联的卷</li>
+<li>ENV <code>&lt;key&gt;</code> <code>&lt;value&gt;</code></li>
+<li>ENV <code>&lt;key1&gt;</code>=<code>&lt;value1&gt;</code> <code>&lt;key2&gt;</code>=<code>&lt;value2&gt;</code>…</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 强制删除容器db01、db02</span><br><span class="line">docker rm -f db01、db02</span><br><span class="line"></span><br><span class="line"># 移除容器nginx01对容器db01的连接，连接名db</span><br><span class="line">docker rm -l db </span><br><span class="line"></span><br><span class="line"># 删除容器nginx01,并删除容器挂载的数据卷</span><br><span class="line">docker rm -v nginx01</span><br></pre></td></tr></table></figure>
-<h2 id="docker-exec"><a href="#docker-exec" class="headerlink" title="docker exec"></a>docker exec</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 在运行的容器中执行命令</span><br><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
-<p>OPTIONS说明</p>
-<ul>
-<li>-d :分离模式: 在后台运行</li>
-<li>-i :即使没有附加也保持STDIN 打开</li>
-<li>-t :分配一个伪终端</li>
+<p>设置了后，后续的RUN命令都可以使用，当运行生成的镜像时这些环境变量依然有效，如果需要在运行时更改这些环境变量可以在运行docker run时添加-env <code>&lt;key&gt;</code>=<code>&lt;value&gt;</code>参数来修改。</p>
+<h2 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h2><p>EXPOSE指令告诉容器在运行时要监听的端口，但是这个端口是用于多个容器之间通信用的（links），外面的host是访问不到的。要把端口暴露给外面的主机，在启动容器时使用-p选项。</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># expose memcached(s) port</span><br><span class="line">EXPOSE 11211 11212</span><br></pre></td></tr></table></figure>
+<h2 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h2><p>WORKDIR指令用于设置Dockerfile中的RUN、CMD和ENTRYPOINT指令执行命令的工作目录(默认为/目录)，该指令在Dockerfile文件中可以出现多次，如果使用相对路径则为相对于WORKDIR上一次的值，例如WORKDIR /a，WORKDIR b，RUN pwd最终输出的当前目录是/a/b。（RUN cd /a/b，RUN pwd是得不到/a/b的）</p>
+<h1 id="Dockerfile示例"><a href="#Dockerfile示例" class="headerlink" title="Dockerfile示例"></a>Dockerfile示例</h1><p>下面的Dockerfile是MySQL官方镜像的构建过程。从ubuntu基础镜像开始构建，安装mysql-server、配置权限、映射目录和端口，CMD在从这个镜像运行到容器时启动mysql。其中VOLUME定义的两个可挂载点，用于在host中挂载，因为数据库保存在主机上而非容器中才是比较安全的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># MySQL Dockerfile</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># https://github.com/dockerfile/mysql</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pull base image.</span></span><br><span class="line">FROM dockerfile/ubuntu</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install MySQL.</span></span><br><span class="line">RUN \</span><br><span class="line">  apt-get update &amp;&amp; \</span><br><span class="line">  DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server &amp;&amp; \</span><br><span class="line">  rm -rf /var/lib/apt/lists/* &amp;&amp; \</span><br><span class="line">  sed -i <span class="string">'s/^\(bind-address\s.*\)/# \1/'</span> /etc/mysql/my.cnf &amp;&amp; \</span><br><span class="line">  sed -i <span class="string">'s/^\(log_error\s.*\)/# \1/'</span> /etc/mysql/my.cnf &amp;&amp; \</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"mysqld_safe &amp;"</span> &gt; /tmp/config &amp;&amp; \</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"mysqladmin --silent --wait=30 ping || exit 1"</span> &gt;&gt; /tmp/config &amp;&amp; \</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"mysql -e 'GRANT ALL PRIVILEGES ON *.* TO \"root\"@\"%\" WITH GRANT OPTION;'"</span> &gt;&gt; /tmp/config &amp;&amp; \</span><br><span class="line">  bash /tmp/config &amp;&amp; \</span><br><span class="line">  rm -f /tmp/config</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define mountable directories.</span></span><br><span class="line">VOLUME [<span class="string">"/etc/mysql"</span>, <span class="string">"/var/lib/mysql"</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define working directory.</span></span><br><span class="line">WORKDIR /data</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define default command.</span></span><br><span class="line">CMD [<span class="string">"mysqld_safe"</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Expose ports.</span></span><br><span class="line">EXPOSE 3306</span><br></pre></td></tr></table></figure>
+<p>使用:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t=<span class="string">"dockerfile/mysql"</span> github.com/dockerfile/mysql</span><br><span class="line"></span><br><span class="line">或下载Dockerfile内容再当前目录：</span><br><span class="line">$ docker build -t=<span class="string">"dockerfile/mysql"</span> .</span><br></pre></td></tr></table></figure>
+<p>运行:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d --name mysql -p 3306:3306 dockerfile/mysql</span><br><span class="line">或</span><br><span class="line">$ docker run -it --rm --link mysql:mysql dockerfile/mysql bash -c <span class="string">'mysql -h $MYSQL_PORT_3306_TCP_ADDR'</span></span><br></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="noopener">Dockerfile reference</a></li>
+<li><a href="http://seanlook.com/2014/11/17/dockerfile-introduction/" target="_blank" rel="noopener">Dockerfile指令详解</a></li>
+<li><a href="https://yeasy.gitbooks.io/docker_practice/image/build.html" target="_blank" rel="noopener">Docker——从入门到实践</a></li>
+<li><a href="https://blog.devzeng.com/blog/build-docker-image-with-dockerfile.html" target="_blank" rel="noopener">使用Dockerfile构建Docker镜像</a></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在容器mynginx中开启一个交互模式的终端</span><br><span class="line">docker exec -it  mynginx /bin/bash</span><br><span class="line"></span><br><span class="line"># 在容器mynginx中以交互模式执行容器内/root/youj.sh脚本</span><br><span class="line">docker exec -it mynginx /bin/sh /root/youj.sh</span><br></pre></td></tr></table></figure>
-<h1 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h1><h2 id="docker-ps"><a href="#docker-ps" class="headerlink" title="docker ps"></a>docker ps</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 列出所有在运行的容器信息</span><br><span class="line">   docker ps</span><br><span class="line"></span><br><span class="line"># 列出最近创建的5个容器信息</span><br><span class="line">   docker ps -n 5</span><br><span class="line"></span><br><span class="line"># 列出所有创建的容器ID</span><br><span class="line">   docker ps -a -q</span><br></pre></td></tr></table></figure>
-<h2 id="docker-top"><a href="#docker-top" class="headerlink" title="docker top"></a>docker top</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 查看容器mymysql的进程信息</span><br><span class="line">docker top mymysql</span><br></pre></td></tr></table></figure>
-<h2 id="docker-logs"><a href="#docker-logs" class="headerlink" title="docker logs"></a>docker logs</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 跟踪查看容器mynginx的日志输出</span><br><span class="line">docker logs -f mynginx</span><br><span class="line"></span><br><span class="line"># 查看容器mynginx从2019年3月1日后的最新10条日志     </span><br><span class="line">docker logs --since=&quot;2019-03-01&quot; --tail=10 mynginx</span><br></pre></td></tr></table></figure>
 
       
 
@@ -327,7 +324,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/10/Docker学习(二)之Docker常用命令/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/15/Docker学习-三-之Dockerfile介绍/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -341,18 +338,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/15/Docker学习-三-之Dockerfile介绍/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Docker学习(三)之Dockerfile笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/08/docker学习(一)之Docker简介和安装/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">docker学习(一)之Docker简介和安装</div>
+    <a href="/2019/03/10/Docker学习(二)之Docker常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Docker学习(二)之Docker常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -380,7 +368,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Docker学习(二)之Docker常用命令" data-title="Docker学习(二)之Docker常用命令" data-url="http://yoursite.com/2019/03/10/Docker学习(二)之Docker常用命令/"></div>
+	<div class="ds-thread" data-thread-key="Docker学习-三-之Dockerfile介绍" data-title="Docker学习(三)之Dockerfile笔记" data-url="http://yoursite.com/2019/03/15/Docker学习-三-之Dockerfile介绍/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -403,8 +391,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2019/03/10/Docker学习(二)之Docker常用命令/", 
-    sourceId: "Docker学习(二)之Docker常用命令",
+    url: "http://yoursite.com/2019/03/15/Docker学习-三-之Dockerfile介绍/", 
+    sourceId: "Docker学习-三-之Dockerfile介绍",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -413,7 +401,7 @@
   
 
   
-  <div id="SOHUCS" sid="Docker学习(二)之Docker常用命令"></div> 
+  <div id="SOHUCS" sid="Docker学习-三-之Dockerfile介绍"></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -432,7 +420,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/03/10/Docker学习(二)之Docker常用命令/",
+  id: "http://yoursite.com/2019/03/15/Docker学习-三-之Dockerfile介绍/",
   owner: 'Traveler-WM',
   repo: 'Traveler-WM.github.io',
   oauth: {

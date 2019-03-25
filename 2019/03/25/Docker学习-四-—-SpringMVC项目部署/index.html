@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="Ming&#39;s Blog">
 <meta property="og:description" content="说明在学习了之前的docker基础后，这次我们便通过部署一个springmvc应用来练练手。默认你已经购买了一台云服务器或者也可以在虚拟机上进行。 项目地址https://github.com/Traveler-WM/BookMS 部署准备 一个springmvc应用，可以git clone上面的项目 在云服务器中安装docker并拉取所需的tomcat和mysql镜像  作为docker实战，我">
 <meta property="og:locale" content="utf-8">
-<meta property="og:image" content="https://github.com/Traveler-WM/Traveler-WM.github.io">
-<meta property="og:image" content="https://github.com/Traveler-WM/Traveler-WM.github.io">
-<meta property="og:updated_time" content="2019-03-25T11:17:53.368Z">
+<meta property="og:image" content="https://github.com/Traveler-WM/Traveler-WM.github.io/tree/master/img/error.jpg">
+<meta property="og:image" content="https://github.com/Traveler-WM/Traveler-WM.github.io/tree/master/img/mysql.jpg">
+<meta property="og:updated_time" content="2019-03-25T11:23:15.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker学习(四)—-SpringMVC项目部署">
 <meta name="twitter:description" content="说明在学习了之前的docker基础后，这次我们便通过部署一个springmvc应用来练练手。默认你已经购买了一台云服务器或者也可以在虚拟机上进行。 项目地址https://github.com/Traveler-WM/BookMS 部署准备 一个springmvc应用，可以git clone上面的项目 在云服务器中安装docker并拉取所需的tomcat和mysql镜像  作为docker实战，我">
-<meta name="twitter:image" content="https://github.com/Traveler-WM/Traveler-WM.github.io">
+<meta name="twitter:image" content="https://github.com/Traveler-WM/Traveler-WM.github.io/tree/master/img/error.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Ming&#39;s Blog" type="application/atom+xml">
   
@@ -224,9 +224,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; grant all PRIVILEGES on *.* to root@&apos;%&apos; WITH GRANT OPTION</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
 <p>2.由于Mysql5.6以上的版本修改了Password算法，这里需要更新密码算法</p>
 <p>当我们尝试连接时，可能会出现如下的错误</p>
-<p><img src="https://github.com/Traveler-WM/Traveler-WM.github.io" alt="error"></p>
+<p><img src="https://github.com/Traveler-WM/Traveler-WM.github.io/tree/master/img/error.jpg" alt="error"></p>
 <p>解决途径:</p>
-<p><img src="https://github.com/Traveler-WM/Traveler-WM.github.io" alt="mysql"></p>
+<p><img src="https://github.com/Traveler-WM/Traveler-WM.github.io/tree/master/img/mysql.jpg" alt="mysql"></p>
 <p>数据库连接成功后，我们通过命令拉去tomcat镜像</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
 <p>接下来部署提供web服务的容器</p>
@@ -525,11 +525,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker springmvc</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker springmvc</a>
               </li>
             
             <div class="clearfix"></div>

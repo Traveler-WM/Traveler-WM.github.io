@@ -33,7 +33,7 @@
 &lt;li&gt;一个springmvc应用，可以&lt;code&gt;git clone&lt;/code&gt;上面的项目&lt;/li&gt;
 &lt;li&gt;在云服务器中安装docker并拉取所需的tomcat和mysql镜像&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;作为docker实战，我们第一步便检查docker是否安装并正常运行，docker的安装可以参考我之前的博文&lt;br&gt;这里我用的是CentOS 7的Linux系统&lt;br&gt;拉取最新版的tomcat镜像&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;作为docker实战，我们第一步便检查docker是否安装并正常运行，docker的安装可以参考我之前的博文&lt;br&gt;这里我用的是CentOS 7的Linux系统&lt;br&gt;拉取最新版的tomcat镜像&lt;br&gt;
     
     </summary>
     
@@ -57,7 +57,7 @@
 &lt;p&gt;Dockerfile是一个文本文档，其中包含用户可以在命令行上调用来构建镜像的所有命令。 使用Dockerfile用户可以创建一个连续执行多个命令行指令的镜像。&lt;/p&gt;
 &lt;h2 id=&quot;实例&quot;&gt;&lt;a href=&quot;#实例&quot; class=&quot;headerlink&quot; title=&quot;实例:&quot;&gt;&lt;/a&gt;实例:&lt;/h2&gt;&lt;p&gt;以构建nginx镜像为例，在一个空白目录，建立一个文本文件，并命名为 dockerfile:&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir mynginx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cd mynginx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ touch dockerfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;在该dockerfile中写入内容:&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;在该dockerfile中写入内容:&lt;br&gt;
     
     </summary>
     
@@ -104,7 +104,7 @@
 &lt;li&gt;Docker 需要的资源更少。Docker 在操作系统级别进行虚拟化，Docker 容器和内核交互，几乎没有性能损耗。&lt;/li&gt;
 &lt;li&gt;Docker 更轻量。Docker 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件环境Docker 运行的镜像数远多于虚拟机数量，对系统的利用率非常高。&lt;/li&gt;
 &lt;li&gt;高可用和可恢复性。Docker 对业务的高可用支持是通过快速重新部署实现的。&lt;/li&gt;
-&lt;li&gt;虚拟化具备负载均衡，高可用，容错，迁移和数据保护等经过生产实践检验的成熟保障机制。&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;虚拟化具备负载均衡，高可用，容错，迁移和数据保护等经过生产实践检验的成熟保障机制。
     
     </summary>
     

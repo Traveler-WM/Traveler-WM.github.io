@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://traveler-wm.github.io/"/>
-  <updated>2019-04-03T12:42:17.598Z</updated>
+  <updated>2019-04-03T13:53:03.480Z</updated>
   <id>https://traveler-wm.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Materialize框架的一些惊艳效果</title>
+    <link href="https://traveler-wm.github.io/2019/04/03/Materialize%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%8A%E8%89%B3%E6%95%88%E6%9E%9C/"/>
+    <id>https://traveler-wm.github.io/2019/04/03/Materialize框架的一些惊艳效果/</id>
+    <published>2019-04-03T12:50:21.000Z</published>
+    <updated>2019-04-03T13:53:03.480Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="About"><a href="#About" class="headerlink" title="About"></a>About</h1><h2 id="一个基于Material-Design的现代响应式前端框架"><a href="#一个基于Material-Design的现代响应式前端框架" class="headerlink" title="一个基于Material Design的现代响应式前端框架"></a>一个基于Material Design的现代响应式前端框架</h2><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul><li>响应式设计，根据设备大小重新设计自己，适合任何屏幕尺寸</li><li>设计简约，标准CSS，占地面积最小。</li><li>包括新版本的通用用户界面控件，如按钮，复选框和文本字段，这些控件适用于材料设计概念。</li><li>包括增强和专门的功能，如卡，标签，导航栏，toasts等。</li><li>需要jQuery javascript库才能正常工作。</li><li>跨浏览器，并且可以用于创建可重用的Web组件。<br>免费使用</li></ul><p><a href="http://www.materializecss.cn/" target="_blank" rel="noopener">中文文档</a></p><p><a href="https://materializecss.com/" target="_blank" rel="noopener">英文文档</a><br><a id="more"></a></p><h2 id="一些惊艳效果"><a href="#一些惊艳效果" class="headerlink" title="一些惊艳效果"></a>一些惊艳效果</h2><h3 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h3><p><img src="https://upload.cc/i1/2019/04/03/GFRKBv.jpg" alt="pic1"></p><p>这个轮播效果类似于幻灯片播放，看起来还是不错的!</p><h3 id="实现"><a href="#实现" class="headerlink" title="实现 :"></a>实现 :</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="carousel"&gt;</span><br><span class="line">    &lt;a class="carousel-item" href="#one!"&gt;&lt;img src="/images/nature/lorempixel1.jpg"&gt;&lt;/a&gt;</span><br><span class="line">    &lt;a class="carousel-item" href="#two!"&gt;&lt;img src="/images/nature/lorempixel2.jpg"&gt;&lt;/a&gt;</span><br><span class="line">    &lt;a class="carousel-item" href="#three!"&gt;&lt;img src="/images/nature/lorempixel3.jpg"&gt;&lt;/a&gt;</span><br><span class="line">    &lt;a class="carousel-item" href="#four!"&gt;&lt;img src="/images/nature/lorempixel4.jpg"&gt;&lt;/a&gt;</span><br><span class="line">    &lt;a class="carousel-item" href="#five!"&gt;&lt;img src="/images/nature/lorempixel5.jpg"&gt;&lt;/a&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure><h3 id="记得JQuery初始化"><a href="#记得JQuery初始化" class="headerlink" title="记得JQuery初始化"></a>记得JQuery初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function()&#123;</span><br><span class="line">      $(&apos;.carousel&apos;).carousel();</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure><h2 id="响应式嵌入"><a href="#响应式嵌入" class="headerlink" title="响应式嵌入"></a>响应式嵌入</h2><h3 id="响应式图片"><a href="#响应式图片" class="headerlink" title="响应式图片"></a>响应式图片</h3><p>将类response-img添加到图像标记中可以根据页面宽度调整图像大小，将class =“circle”添加可以使图像显示为圆形。</p><p><img src="https://upload.cc/i1/2019/04/03/KPRigO.jpg" alt="pic2"></p><h3 id="视频嵌入"><a href="#视频嵌入" class="headerlink" title="视频嵌入"></a>视频嵌入</h3><p>为了使你的嵌入响应，只需用包含div的视频容器class =“video-container”包裹它们</p><p><img src="https://upload.cc/i1/2019/04/03/ohPrzx.jpg" alt="pic3"></p><h2 id="丰富的图标"><a href="#丰富的图标" class="headerlink" title="丰富的图标"></a>丰富的图标</h2><p>Material拥有932种图标资源，非常丰富</p><p>使用 ：</p><p><code>head</code>标签引入下列代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;</span><br></pre></td></tr></table></figure></p><p>支持<code>tiny</code>、<code>small</code>、<code>medium</code>、<code>large</code>四种尺寸</p><p><img src="https://i.loli.net/2019/04/03/5ca4b87ab399b.jpg" alt="pic4"></p><h2 id="卡片式呈现"><a href="#卡片式呈现" class="headerlink" title="卡片式呈现"></a>卡片式呈现</h2><p>卡片是显示由不同类型的对象组成的内容的便利方式。它们也非常适合呈现类似对象，其大小或支持的操作可能会有很大差异，例如带有可变长度字幕的照片。<br>可以设置卡片小中大三种尺寸</p><p>带有图文及链接的卡片:</p><p><img src="https://i.loli.net/2019/04/03/5ca4b9f624b8f.jpg" alt="pic5"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;About&quot;&gt;&lt;a href=&quot;#About&quot; class=&quot;headerlink&quot; title=&quot;About&quot;&gt;&lt;/a&gt;About&lt;/h1&gt;&lt;h2 id=&quot;一个基于Material-Design的现代响应式前端框架&quot;&gt;&lt;a href=&quot;#一个基于Material-Design的现代响应式前端框架&quot; class=&quot;headerlink&quot; title=&quot;一个基于Material Design的现代响应式前端框架&quot;&gt;&lt;/a&gt;一个基于Material Design的现代响应式前端框架&lt;/h2&gt;&lt;h2 id=&quot;Features&quot;&gt;&lt;a href=&quot;#Features&quot; class=&quot;headerlink&quot; title=&quot;Features&quot;&gt;&lt;/a&gt;Features&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;响应式设计，根据设备大小重新设计自己，适合任何屏幕尺寸&lt;/li&gt;
+&lt;li&gt;设计简约，标准CSS，占地面积最小。&lt;/li&gt;
+&lt;li&gt;包括新版本的通用用户界面控件，如按钮，复选框和文本字段，这些控件适用于材料设计概念。&lt;/li&gt;
+&lt;li&gt;包括增强和专门的功能，如卡，标签，导航栏，toasts等。&lt;/li&gt;
+&lt;li&gt;需要jQuery javascript库才能正常工作。&lt;/li&gt;
+&lt;li&gt;跨浏览器，并且可以用于创建可重用的Web组件。&lt;br&gt;免费使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.materializecss.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;中文文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://materializecss.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;英文文档&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="materialize" scheme="https://traveler-wm.github.io/tags/materialize/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客图床选择</title>

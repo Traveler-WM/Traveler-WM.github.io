@@ -41,9 +41,9 @@
     </summary>
     
     
-      <category term="Spring" scheme="https://traveler-wm.github.io/tags/Spring/"/>
-    
       <category term="Spring MVC" scheme="https://traveler-wm.github.io/tags/Spring-MVC/"/>
+    
+      <category term="Spring" scheme="https://traveler-wm.github.io/tags/Spring/"/>
     
   </entry>
   

@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://traveler-wm.github.io">
-  <title>docker学习(一)之Docker简介和安装 | Ming&#39;s Blog</title>
+  <title>Shiro学习 | Ming&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Docker简介概念Docker是开发人员和系统管理员使用容器开发，部署和运行应用程序的平台。使用Linux容器部署应用程序称为容器化。 优势 Docker 启动快速属于秒级别。 Docker 需要的资源更少。Docker 在操作系统级别进行虚拟化，Docker 容器和内核交互，几乎没有性能损耗。 Docker 更轻量。Docker 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件">
-<meta name="keywords" content="docker">
+  <meta name="description" content="序言用户认证用户认证，即用户去访问系统，系统要验证用户身份的合法性。web系统常用的用户身份验证方式即为用户名密码方式。 认证流程:  判断该资源能否不认证就能访问【登陆页面、首页】 如果该资源需要认证后才能访问，那么判断该访问者是否认证了 如果还没有认证，那么需要返回到【登陆页面】进行认证 认证通过后才能访问资源  对应的Shiro概念(主体在进行身份认证时需要提供身份信息和凭证信息)：  su">
+<meta name="keywords" content="security,shiro">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker学习(一)之Docker简介和安装">
-<meta property="og:url" content="https://traveler-wm.github.io/2019/03/08/docker学习(一)之Docker简介和安装/index.html">
+<meta property="og:title" content="Shiro学习">
+<meta property="og:url" content="https://traveler-wm.github.io/2019/04/13/Shiro学习/index.html">
 <meta property="og:site_name" content="Ming&#39;s Blog">
-<meta property="og:description" content="Docker简介概念Docker是开发人员和系统管理员使用容器开发，部署和运行应用程序的平台。使用Linux容器部署应用程序称为容器化。 优势 Docker 启动快速属于秒级别。 Docker 需要的资源更少。Docker 在操作系统级别进行虚拟化，Docker 容器和内核交互，几乎没有性能损耗。 Docker 更轻量。Docker 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件">
+<meta property="og:description" content="序言用户认证用户认证，即用户去访问系统，系统要验证用户身份的合法性。web系统常用的用户身份验证方式即为用户名密码方式。 认证流程:  判断该资源能否不认证就能访问【登陆页面、首页】 如果该资源需要认证后才能访问，那么判断该访问者是否认证了 如果还没有认证，那么需要返回到【登陆页面】进行认证 认证通过后才能访问资源  对应的Shiro概念(主体在进行身份认证时需要提供身份信息和凭证信息)：  su">
 <meta property="og:locale" content="UTF-8">
-<meta property="og:updated_time" content="2019-03-10T04:48:37.089Z">
+<meta property="og:image" content="https://upload.cc/i1/2019/04/13/5qyUW8.jpg">
+<meta property="og:updated_time" content="2019-04-13T12:15:46.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker学习(一)之Docker简介和安装">
-<meta name="twitter:description" content="Docker简介概念Docker是开发人员和系统管理员使用容器开发，部署和运行应用程序的平台。使用Linux容器部署应用程序称为容器化。 优势 Docker 启动快速属于秒级别。 Docker 需要的资源更少。Docker 在操作系统级别进行虚拟化，Docker 容器和内核交互，几乎没有性能损耗。 Docker 更轻量。Docker 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件">
+<meta name="twitter:title" content="Shiro学习">
+<meta name="twitter:description" content="序言用户认证用户认证，即用户去访问系统，系统要验证用户身份的合法性。web系统常用的用户身份验证方式即为用户名密码方式。 认证流程:  判断该资源能否不认证就能访问【登陆页面、首页】 如果该资源需要认证后才能访问，那么判断该访问者是否认证了 如果还没有认证，那么需要返回到【登陆页面】进行认证 认证通过后才能访问资源  对应的Shiro概念(主体在进行身份认证时需要提供身份信息和凭证信息)：  su">
+<meta name="twitter:image" content="https://upload.cc/i1/2019/04/13/5qyUW8.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Ming&#39;s Blog" type="application/atom+xml">
   
@@ -155,20 +157,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-docker学习(一)之Docker简介和安装" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Shiro学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      docker学习(一)之Docker简介和安装
+      Shiro学习
     </h1>
   
 
         
-        <a href="/2019/03/08/docker学习(一)之Docker简介和安装/" class="archive-article-date">
-  	<time datetime="2019-03-08T11:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
+        <a href="/2019/04/13/Shiro学习/" class="archive-article-date">
+  	<time datetime="2019-04-13T10:41:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-13</time>
 </a>
          <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -178,7 +180,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">725字</span>
+      <span class="post-count">1.4k字</span>
     </span>
   </span>
 
@@ -187,7 +189,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">2分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -199,33 +201,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Docker简介"><a href="#Docker简介" class="headerlink" title="Docker简介"></a>Docker简介</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><pre><code>Docker是开发人员和系统管理员使用容器开发，部署和运行应用程序的平台。使用Linux容器部署应用程序称为容器化。
-</code></pre><h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ul>
-<li>Docker 启动快速属于秒级别。</li>
-<li>Docker 需要的资源更少。Docker 在操作系统级别进行虚拟化，Docker 容器和内核交互，几乎没有性能损耗。</li>
-<li>Docker 更轻量。Docker 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件环境Docker 运行的镜像数远多于虚拟机数量，对系统的利用率非常高。</li>
-<li>高可用和可恢复性。Docker 对业务的高可用支持是通过快速重新部署实现的。</li>
-<li>虚拟化具备负载均衡，高可用，容错，迁移和数据保护等经过生产实践检验的成熟保障机制。<a id="more"></a></li>
-<li>快速创建、删除。虚拟化创建是分钟级别的，Docker 容器创建是秒级别的，Docker 的快速迭代性，决定了无论是开发、测试、部署都可以节约大量时间</li>
+        <h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><h3 id="用户认证"><a href="#用户认证" class="headerlink" title="用户认证"></a>用户认证</h3><p>用户认证，即用户去访问系统，系统要验证用户身份的合法性。web系统常用的用户身份验证方式即为用户名密码方式。</p>
+<p>认证流程:</p>
+<ul>
+<li>判断该资源能否不认证就能访问【登陆页面、首页】</li>
+<li>如果该资源需要认证后才能访问，那么判断该访问者是否认证了</li>
+<li>如果还没有认证，那么需要返回到【登陆页面】进行认证</li>
+<li>认证通过后才能访问资源</li>
 </ul>
-<h2 id="容器和镜像"><a href="#容器和镜像" class="headerlink" title="容器和镜像"></a>容器和镜像</h2><pre><code>一个容器通过镜像启动。镜像是一个可执行包，包含运行应用程序所需的所有内容——代码、运行时、库、环境变量和配置文件。容器是镜像运行时的实例  
-</code></pre><h2 id="容器和虚拟机"><a href="#容器和虚拟机" class="headerlink" title="容器和虚拟机"></a>容器和虚拟机</h2><pre><code>容器在Linux上本机运行，并与其他容器共享主机的内核。它运行一个独立的进程，不占用任何其他可执行文件的内存，使其轻量级。相比之下，虚拟机（VM）运行一个完整的“客户”操作系统，通过虚拟机管理程序对主机资源进行虚拟访问。通常，VM提供的环境比大多数应用程序需要的资源更多。    
-</code></pre><h1 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h1><h2 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h2><p><strong>卸载掉旧版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure></p>
-<p> <strong>安装依赖包</strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install -y yum-utils \</span><br><span class="line">      device-mapper-persistent-data \</span><br><span class="line">      lvm2</span><br></pre></td></tr></table></figure></p>
-<p> <strong>设置稳定版仓库</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></p>
-<p><strong>安装最新版Docker CE</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure></p>
-<p><strong>启动Docker</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure></p>
-<p><strong>运行hellow-word镜像</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure></p>
-<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><p><strong>卸载可能存在的旧版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get remove docker docker-engine docker.io containerd runc</span><br></pre></td></tr></table></figure></p>
-<p><strong>更新apt索引包</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></p>
-<p><strong>安装包通过https使用repository</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br></pre></td></tr></table></figure></p>
-<p><strong>添加Docker的官方GPG密钥</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure></p>
-<p><strong>更新apt包索引</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure></p>
-<p><strong>安装最新版Docker CE</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure></p>
-<p><strong>PS:安装特定版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache madison docker-ce</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install docker-ce=&lt;VERSION_STRING&gt; docker-ce-cli=&lt;VERSION_STRING&gt; containerd.io</span><br></pre></td></tr></table></figure>
-<p><strong>运行hello-word镜像</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker run hello-world</span><br></pre></td></tr></table></figure></p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="http://dockone.io/article/8350" target="_blank" rel="noopener">http://dockone.io/article/8350</a></p>
+<p>对应的Shiro概念(主体在进行身份认证时需要提供身份信息和凭证信息)：</p>
+<ul>
+<li>subject主体：理解为用户,可能是程序，都要去访问系统的资源，系统需要对subject进行身份认证</li>
+<li>principal身份信息：通常是唯一的，一个主体还有多个身份信息，但是都有一个主身份信息（primary principal）【我们可以选择身份证认证、学生证认证等等都是我们的身份信息】</li>
+<li>credential凭证信息：可以是密码 、证书、指纹</li>
+</ul>
+<h2 id="用户授权"><a href="#用户授权" class="headerlink" title="用户授权"></a>用户授权</h2><p>用户授权，简单理解为访问控制，在用户认证通过后，系统对用户访问资源进行控制，用户具有资源的访问权限方可访问。</p>
+<p>到达用户授权这一步的前提是用户已经经过认证，此时用户要想访问特定资源，则必须拥有特定的权限。<br>权限包括：用户添加、商品删除、商品信息修改等。</p>
+<h1 id="权限管理模型"><a href="#权限管理模型" class="headerlink" title="权限管理模型"></a>权限管理模型</h1><ul>
+<li>用户（账号、密码）</li>
+<li>角色（角色id、角色名称）</li>
+<li>权限（权限id、权限名称）</li>
+<li>用户和角色关系（用户id、角色id）</li>
+<li>角色和权限关系（角色id、权限id）</li>
+</ul>
+<p><img src="https://upload.cc/i1/2019/04/13/5qyUW8.jpg" alt="权限管理模型"></p>
+<h2 id="分配权限"><a href="#分配权限" class="headerlink" title="分配权限"></a>分配权限</h2><p>用户需要分配相应的权限才可访问相应的资源。权限是对于资源的操作许可。</p>
+<p>通常给用户分配资源权限需要将权限信息持久化，比如存储在关系数据库中。把用户信息、权限管理、用户分配的权限信息写到数据库（权限数据模型）</p>
+<h1 id="Shiro介绍"><a href="#Shiro介绍" class="headerlink" title="Shiro介绍"></a>Shiro介绍</h1><p>shiro是apache的一个开源框架，是一个权限管理的框架，实现 用户认证、用户授权。spring中有spring security，是一个权限框架，它和spring依赖过于紧密，没有shiro使用简单。 shiro不依赖于spring，shiro不仅可以实现 web应用的权限管理，还可以实现c/s系统，分布式系统权限管理，shiro属于轻量框架。</p>
+<p>我们在使用URL拦截的时候，要将所有的URL都配置起来，繁琐、不易维护<br>而我们的Shiro实现系统的权限管理，有效提高开发效率，从而降低开发成本</p>
+<ul>
+<li>securityManager：安全管理器，主体进行认证和授权都 是通过securityManager进行。</li>
+<li>authenticator：认证器，主体进行认证最终通过authenticator进行的。</li>
+<li>authorizer：授权器，主体进行授权最终通过authorizer进行的。</li>
+<li>sessionManager：web应用中一般是用web容器对session进行管理，shiro也提供一套session管理的方式。</li>
+<li>SessionDao： 通过SessionDao管理session数据，针对个性化的session数据存储需要使用sessionDao。</li>
+<li>cache Manager：缓存管理器，主要对session和授权数据进行缓存，比如将授权数据通过cacheManager进行缓存管理，和ehcache整合对缓存数据进行管理。</li>
+<li>realm：域，领域，相当于数据源，通过realm存取认证、授权相关数据。</li>
+</ul>
+<h1 id="自定义realm"><a href="#自定义realm" class="headerlink" title="自定义realm"></a>自定义realm</h1><p>realm:根据token中的身份信息去查询数据库，如果查到用户返回认证信息，如果查询不到返回null。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/loginUser"</span>)</span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">loginUser</span><span class="params">(@RequestParam(<span class="string">"username"</span>)</span> String username,</span></span><br><span class="line"><span class="function">                           @<span class="title">RequestParam</span><span class="params">(<span class="string">"password"</span>)</span> String password,</span></span><br><span class="line"><span class="function">                           HttpSession session)</span>&#123;</span><br><span class="line">       System.out.println(<span class="string">"username:"</span>+username+<span class="string">",password:"</span>+password);</span><br><span class="line">       UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(username,password);</span><br><span class="line">       <span class="comment">//主体</span></span><br><span class="line">       Subject subject = SecurityUtils.getSubject();</span><br><span class="line">       <span class="comment">//认证逻辑可能出现异常</span></span><br><span class="line">       <span class="keyword">try</span>&#123;</span><br><span class="line">           <span class="comment">//主体进行登陆</span></span><br><span class="line">           subject.login(token);</span><br><span class="line">           <span class="comment">//获取登陆用户</span></span><br><span class="line">           User user = (User) subject.getPrincipal();</span><br><span class="line">           <span class="comment">//写入Session</span></span><br><span class="line">           session.setAttribute(<span class="string">"user"</span>,user);</span><br><span class="line">           <span class="keyword">return</span> <span class="string">"index"</span>;</span><br><span class="line">       &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="string">"login"</span>;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AuthRealm</span> <span class="keyword">extends</span> <span class="title">AuthorizingRealm</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//授权(取出Session中的User对象)</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> AuthorizationInfo <span class="title">doGetAuthorizationInfo</span><span class="params">(PrincipalCollection principalCollection)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//session中获取用户</span></span><br><span class="line">        User user = (User) principalCollection.fromRealm(<span class="keyword">this</span>.getClass().getName()).iterator().next();</span><br><span class="line">        String username = user.getUsername();</span><br><span class="line">        <span class="comment">//权限集合</span></span><br><span class="line">        List&lt;String&gt; permissionList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//角色集合</span></span><br><span class="line">        List&lt;String&gt; roleNameList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        Set&lt;Role&gt; roleSet =  user.getRoles();</span><br><span class="line">        <span class="keyword">if</span>(CollectionUtils.isNotEmpty(roleSet))&#123;</span><br><span class="line">            <span class="keyword">for</span>(Role role : roleSet)&#123;</span><br><span class="line">                roleNameList.add(role.getRname());</span><br><span class="line">                Set&lt;Permission&gt; permissionSet = role.getPermissons();</span><br><span class="line">                <span class="keyword">if</span>(CollectionUtils.isNotEmpty(permissionSet))&#123;</span><br><span class="line">                    <span class="keyword">for</span>(Permission permission : permissionSet)&#123;</span><br><span class="line">                        <span class="comment">//放入权限集合</span></span><br><span class="line">                        permissionList.add(permission.getName());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        SimpleAuthorizationInfo info = <span class="keyword">new</span> SimpleAuthorizationInfo();</span><br><span class="line">        info.addStringPermissions(permissionList);</span><br><span class="line">        info.addRoles(roleNameList);</span><br><span class="line">        <span class="keyword">return</span> info;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//认证登陆(认证登陆成功后把User对应放入session中)</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> AuthenticationInfo <span class="title">doGetAuthenticationInfo</span><span class="params">(AuthenticationToken authenticationToken)</span> <span class="keyword">throws</span> AuthenticationException </span>&#123;</span><br><span class="line">        UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) authenticationToken;</span><br><span class="line">        <span class="comment">//从转换后的token中获取用户名的信息</span></span><br><span class="line">        String username = usernamePasswordToken.getUsername();</span><br><span class="line">        <span class="comment">//DB获取用户的密码</span></span><br><span class="line">        User user = userService.findByUsername(username);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> SimpleAuthenticationInfo(user,user.getPassword(),<span class="keyword">this</span>.getClass().getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="散列算法md5"><a href="#散列算法md5" class="headerlink" title="散列算法md5"></a>散列算法md5</h1><p>我们知道md5是不可逆的，但是如果设置了一些安全性比较低的密码：111111…即时是不可逆的，但还是可以通过暴力算法来得到md5对应的明文…建议对md5进行散列时加salt（盐），进行加密相当 于对原始密码+盐进行散列。</p>
+<p>正常使用时散列方法：在程序中对原始密码+盐进行散列，将散列值存储到数据库中，并且还要将盐也要存储在数据库中。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/34769104" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/34769104</a></p>
 
       
 
@@ -239,7 +257,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">security</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shiro</a>
         		</li>
       		
 		</ul>
@@ -295,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://traveler-wm.github.io/2019/03/08/docker学习(一)之Docker简介和安装/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://traveler-wm.github.io/2019/04/13/Shiro学习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,15 +331,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/10/Docker学习(二)之Docker常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Docker学习(二)之Docker常用命令
-        
-      </div>
-    </a>
   
+    <a href="/2019/04/10/Spring和Spring-MVC总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring和Spring MVC总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -343,7 +361,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="docker学习(一)之Docker简介和安装" data-title="docker学习(一)之Docker简介和安装" data-url="https://traveler-wm.github.io/2019/03/08/docker学习(一)之Docker简介和安装/"></div>
+	<div class="ds-thread" data-thread-key="Shiro学习" data-title="Shiro学习" data-url="https://traveler-wm.github.io/2019/04/13/Shiro学习/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -366,8 +384,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "https://traveler-wm.github.io/2019/03/08/docker学习(一)之Docker简介和安装/", 
-    sourceId: "docker学习(一)之Docker简介和安装",
+    url: "https://traveler-wm.github.io/2019/04/13/Shiro学习/", 
+    sourceId: "Shiro学习",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -376,7 +394,7 @@
   
 
   
-  <div id="SOHUCS" sid="docker学习(一)之Docker简介和安装"></div> 
+  <div id="SOHUCS" sid="Shiro学习"></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
     window.changyan.api.config({

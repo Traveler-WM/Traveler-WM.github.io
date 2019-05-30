@@ -18,7 +18,7 @@
 <meta property="og:locale" content="UTF-8">
 <meta property="og:image" content="https://upload.cc/i1/2019/05/30/r4LqcM.png">
 <meta property="og:image" content="https://upload.cc/i1/2019/05/30/ICucvV.jpg">
-<meta property="og:updated_time" content="2019-05-30T03:25:16.564Z">
+<meta property="og:updated_time" content="2019-05-30T03:29:30.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JWT学习">
 <meta name="twitter:description" content="什么是JSON Web Token？JSON Web Token（JWT）是一个开放标准（RFC 7519），它定义了一种紧凑且独立的方式，用于在各方之间作为JSON对象安全地传输信息。此信息可以通过数字签名进行验证和信任。JWT可以使用秘密（使用HMAC算法）或使用RSA或ECDSA的公钥/私钥对进行签名。 什么时候应该使用JWT？以下是JSON Web令牌有用的一些场景：  授权：这是使用JW">
@@ -223,7 +223,8 @@
 <p>因此，JWT通常如下所示。</p>
 <p>xxxxx.yyyyy.zzzzz</p>
 <p>让我们分解不同的部分。</p>
-<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><p>标头通常由两部分组成：Token的类型，即JWT，以及正在使用的签名算法，例如HMAC SHA256或RSA。</p>
+<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><a id="more"></a>
+<p>标头通常由两部分组成：Token的类型，即JWT，以及正在使用的签名算法，例如HMAC SHA256或RSA。</p>
 <p>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;alg&quot;: &quot;HS256&quot;,</span><br><span class="line">  &quot;typ&quot;: &quot;JWT&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后，这个JSON被编码为Base64Url，形成JWT的第一部分。</p>
